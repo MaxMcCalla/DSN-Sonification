@@ -7,7 +7,7 @@ fetch('https://eyes.nasa.gov/dsn/data/dsn.json')
     console.log(data.dishes[dish].desc)
     console.log("antenna"+i)
     const element = document.getElementById("antenna"+i);
-    element.innerHTML = data.dishes[dish] + data.dishes[dish].desc
+    element.innerHTML = dish + data.dishes[dish].desc
     }
   }) // Work with the parsed data
   .catch(error => console.error('Error fetching data:', error)); // Handle network errors
