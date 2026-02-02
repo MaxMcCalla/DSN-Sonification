@@ -5,7 +5,7 @@ fetch('https://eyes.nasa.gov/dsn/data/dsn.json')
     for(const dish in data.dishes){
     i++;
     console.log(data.dishes[dish].desc)
-    console.lot("antenna"+i)
+    console.log("antenna"+i)
     const element = document.getElementById("antenna"+i);
     element.innerHTML = data.dishes[dish] + data.dishes[dish].desc
     }
