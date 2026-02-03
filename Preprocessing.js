@@ -10,7 +10,8 @@ fetch('https://eyes.nasa.gov/dsn/data/dsn.json')
       element.innerHTML = dish + " " + data.dishes[dish].desc
       for(const sig in data.dishes[dish].sigs){
         if(data.dishes[dish].sigs[sig].active == true){
-        console.log(data.dishes[dish].sigs[sig].dir)
+          console.log(data.dishes[dish].sigs[sig].dir)
+          element.innerHTML = element.innerHTML + " " + data.dishes[dish].sigs[sig].dir
         }
       }
     }
