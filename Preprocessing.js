@@ -8,8 +8,8 @@ fetch('https://eyes.nasa.gov/dsn/data/dsn.json')
       console.log("antenna"+i)
       const element = document.getElementById("antenna"+i);
       element.innerHTML = dish + " " + data.dishes[dish].desc
-      for(const sig in dish.sigs){
-        console.log(sig)
+      for(const sig in data.dishes[dish].sigs){
+        console.log(data.dishes[dish].sigs[sig].active)
       }
     }
   }) // Work with the parsed data
