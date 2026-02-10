@@ -1,6 +1,3 @@
-// Get createDevice from the rnbo.js library
-const device = await RNBO.createDevice({ audioContext, patcher });
-
 // Create AudioContext
 let WAContext = window.AudioContext || window.webkitAudioContext;
 let context = new WAContext();
