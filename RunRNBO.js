@@ -1,10 +1,11 @@
 // Create AudioContext
-import createDevice from "https://cdn.cycling74.com/rnbo/latest/rnbo.min.js"
+
 
 let WAContext = window.AudioContext || window.webkitAudioContext;
 let context = new WAContext();
 
 const setup = async () => {
+    import createDevice from "https://cdn.cycling74.com/rnbo/latest/rnbo.min.js"
     let rawPatcher = await fetch("https://raw.githubusercontent.com/MaxMcCalla/DSN-Sonification/refs/heads/gh-pages/patch.export.json");
     let patcher = await rawPatcher.json();
 
