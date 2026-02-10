@@ -1,5 +1,5 @@
 // Get createDevice from the rnbo.js library
-const { createDevice } = require("@rnbo/js");
+const device = await RNBO.createDevice({ audioContext, patcher });
 
 // Create AudioContext
 let WAContext = window.AudioContext || window.webkitAudioContext;
