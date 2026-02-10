@@ -5,11 +5,11 @@ let WAContext = window.AudioContext || window.webkitAudioContext;
 let context = new WAContext();
 
 const setup = async () => {
-    const createDevice = await import("https://cdn.cycling74.com/rnbo/latest/rnbo.min.js");
+    const RNBO = await import("https://cdn.cycling74.com/rnbo/latest/rnbo.min.js");
     let rawPatcher = await fetch("https://raw.githubusercontent.com/MaxMcCalla/DSN-Sonification/refs/heads/gh-pages/patch.export.json");
     let patcher = await rawPatcher.json();
 
-    let device = await createDevice({ context, patcher });
+    let device = await RNBO.createDevice({ context, patcher });
 
     // This connects the device to audio output, but you may still need to call context.resume()
     // from a user-initiated function.
