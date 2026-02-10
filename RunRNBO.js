@@ -1,4 +1,6 @@
 // Create AudioContext
+import createDevice from "https://cdn.cycling74.com/rnbo/latest/rnbo.min.js"
+
 let WAContext = window.AudioContext || window.webkitAudioContext;
 let context = new WAContext();
 
