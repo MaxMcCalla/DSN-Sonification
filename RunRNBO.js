@@ -3,7 +3,7 @@ let WAContext = window.AudioContext || window.webkitAudioContext;
 let context = new WAContext();
 
 const setup = async () => {
-    let rawPatcher = await fetch("patcher.export.json");
+    let rawPatcher = await fetch("https://raw.githubusercontent.com/MaxMcCalla/DSN-Sonification/refs/heads/gh-pages/patch.export.json");
     let patcher = await rawPatcher.json();
 
     let device = await createDevice({ context, patcher });
